@@ -27,11 +27,12 @@
       {{- partial "post_canonical.html" . -}}
     </div>
     {{- end }}
+    {{ $filePath := printf "%s%s" "content/" .File.Path }}
 
     <script 
     type="module" 
     src="https://penmark.appsinprogress.com/dist/PostClient.js" 
-    postfilepath="{{ .Page.Path }}"
+    postfilepath="{{ $filePath }}"
     draftsFolder="drafts"
     postsFolder="content/posts"
     imagesFolder="static/images"
