@@ -27,7 +27,7 @@
       {{- partial "post_canonical.html" . -}}
     </div>
     {{- end }}
-    {{ $filePath := printf "%s%s" "content/" .File.Path }}
+    {{ $filePath := printf "%s%s" "content/" .Page.Path }}
 
     <script 
     type="module" 
