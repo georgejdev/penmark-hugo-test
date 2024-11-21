@@ -27,6 +27,17 @@
       {{- partial "post_canonical.html" . -}}
     </div>
     {{- end }}
+
+    <script 
+    type="module" 
+    src="https://penmark.appsinprogress.com/dist/PostClient.js" 
+    postfilepath="{{ .Page.Path }}"
+    draftsFolder="drafts"
+    postsFolder="content/posts"
+    imagesFolder="static/images"
+    githubUsername="georgejdev"
+    githubRepoName="penmark-hugo-test"  
+></script> 
   </header>
   {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
